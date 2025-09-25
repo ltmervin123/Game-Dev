@@ -5,8 +5,8 @@ public class PlayerMovement : MonoBehaviour
 {   
     private Animator anim;
     private Rigidbody2D rb;
-    private float speed = 2.5f;
-    private float jumpForce = 4f;
+    private float speed = 3.5f;
+    private float jumpForce = 6f;
     private bool isGrounded;
   
 
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     void jump()
     {
         float currentYPosition = transform.position.y;
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetBool("isJumping", true);
