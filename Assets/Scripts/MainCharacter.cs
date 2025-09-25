@@ -2,32 +2,43 @@ using UnityEngine;
 
 
 public class PlayerMovement : MonoBehaviour
-{
+{   
+    private Animator anim;
     private Rigidbody2D rb;
-    private float speed = 10f;
+    private float speed = 3.5f;
+    private float jumpForce = 6f;
     private bool isGrounded;
+  
 
 
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
         move();
         jump();
+        Animation();
 
+    }
+        
+    void Animation()
+    {
+        bool isMoving = rb.linearVelocity.x != 0;
+        anim.SetBool("isMoving", isMoving);
     }
 
     void jump()
     {
         float currentYPosition = transform.position.y;
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, speed);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            anim.SetBool("isJumping", true);
         }
     }
 
@@ -62,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            anim.SetBool("isJumping", false);
         }
     }
 
