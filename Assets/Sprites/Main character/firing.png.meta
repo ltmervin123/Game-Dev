@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: baa70d606f4968c41882777d436b6ea8
+guid: e48bb138e8311fe4bacaa45facb037b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8413155566475000514
-    second: Scene (1)_0
+      213: 4744641724378961922
+    second: Firing_0
   - first:
-      213: 191094797123161008
-    second: Scene (1)_1
+      213: -8420602139968898775
+    second: Firing_1
+  - first:
+      213: -2472190762374662154
+    second: Firing_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Scene (1)_0
+      name: Firing_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 882
-        width: 2100
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1463
+        y: 94
+        width: 904
+        height: 813
+      alignment: 9
+      pivot: {x: 0.16086923, y: 0.9184781}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e35482c46977e3b80800000000000000
-      internalID: -8413155566475000514
+      spriteID: 208da18928a58d140800000000000000
+      internalID: 4744641724378961922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scene (1)_1
+      name: Firing_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 373
-        width: 2100
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3085
+        y: 94
+        width: 936
+        height: 813
+      alignment: 9
+      pivot: {x: 0.1524919, y: 0.9184781}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0bb83fc94b7e6a200800000000000000
-      internalID: 191094797123161008
+      spriteID: 929724cc7f2042b80800000000000000
+      internalID: -8420602139968898775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firing_2
+      rect:
+        serializedVersion: 2
+        x: 4656
+        y: 94
+        width: 957
+        height: 813
+      alignment: 9
+      pivot: {x: 0.15230395, y: 0.9184781}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7f7af899301bdd0800000000000000
+      internalID: -2472190762374662154
       vertices: []
       indices: 
       edges: []
@@ -150,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 53f9bfa38e55aa54e80fec56b6420781
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Scene (1)_0: -8413155566475000514
-      Scene (1)_1: 191094797123161008
+      Firing_0: 4744641724378961922
+      Firing_1: -8420602139968898775
+      Firing_2: -2472190762374662154
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

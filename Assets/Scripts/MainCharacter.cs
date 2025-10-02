@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 3f;
     private float jumpForce = 4.5f;
     private bool isGrounded;
+    private bool isFiring; 
 
     void Awake()
     {
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        fire();      
         move();
         jump();
         Animation();
@@ -25,20 +27,38 @@ public class PlayerMovement : MonoBehaviour
     {
         bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
         anim.SetBool("isMoving", isMoving);
-        anim.SetBool("isJumping", !isGrounded); 
+        anim.SetBool("isJumping", !isGrounded);
     }
 
     void jump()
     {
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded && !isFiring)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             isGrounded = false;
         }
     }
 
+    void fire()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && !isFiring)
+        {
+            isFiring = true;
+            anim.SetTrigger("isFiring");
+            float fireAnimLength = anim.GetCurrentAnimatorStateInfo(0).length;
+            Invoke(nameof(ResetFiring), fireAnimLength);
+        }
+    }
+
+    void ResetFiring()
+    {
+        isFiring = false;
+    }
+
     void move()
     {
+        if (isFiring) return;
+
         rb.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.linearVelocity.y);
         flip();
     }
