@@ -1,16 +1,13 @@
 using UnityEngine;
 
-
 public class PlayerMovement : MonoBehaviour
-{   
+{
     private Animator anim;
     private Rigidbody2D rb;
-    private float speed = 3.5f;
-    private float jumpForce = 6f;
+    private float speed = 3f;
+    private float jumpForce = 4.5f;
     private bool isGrounded;
-  
-
-
+    private bool isFiring; 
 
     void Awake()
     {
@@ -20,63 +17,68 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        fire();      
         move();
         jump();
         Animation();
-
     }
-        
+
     void Animation()
     {
-        bool isMoving = rb.linearVelocity.x != 0;
+        bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
         anim.SetBool("isMoving", isMoving);
+        anim.SetBool("isJumping", !isGrounded);
     }
 
     void jump()
     {
-        float currentYPosition = transform.position.y;
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded && !isFiring)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            anim.SetBool("isJumping", true);
+            isGrounded = false;
         }
+    }
+
+    void fire()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && !isFiring)
+        {
+            isFiring = true;
+            anim.SetTrigger("isFiring");
+            float fireAnimLength = anim.GetCurrentAnimatorStateInfo(0).length;
+            Invoke(nameof(ResetFiring), fireAnimLength);
+        }
+    }
+
+    void ResetFiring()
+    {
+        isFiring = false;
     }
 
     void move()
     {
-        rb.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.linearVelocity.y);
+        if (isFiring) return;
 
+        rb.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.linearVelocity.y);
         flip();
     }
 
     void flip()
     {
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        if (Input.GetKeyDown(KeyCode.A))
-        {
+        if (Input.GetAxis("Horizontal") < 0)
             spriteRenderer.flipX = true;
-            return;
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
+        else if (Input.GetAxis("Horizontal") > 0)
             spriteRenderer.flipX = false;
-            return;
-        }
     }
 
-   
     private void OnCollisionEnter2D(Collision2D collision)
     {
-  
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
-            anim.SetBool("isJumping", false);
         }
     }
-
 
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -85,6 +87,4 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
         }
     }
-
-
 }
