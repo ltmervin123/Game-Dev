@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a5cab8c87263f3489656ffa644972ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseManu
-  pauseMenuUI: {fileID: 1864237253}
+  pausePanel: {fileID: 0}
 --- !u!1 &755464620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1280,7 @@ GameObject:
   - component: {fileID: 1633506632}
   m_Layer: 0
   m_Name: EdgeRight
-  m_TagString: Untagged
+  m_TagString: LevelOneEndCheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
