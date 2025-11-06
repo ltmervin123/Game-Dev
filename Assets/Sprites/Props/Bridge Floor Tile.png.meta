@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: e48bb138e8311fe4bacaa45facb037b2
+guid: 9bcfeaf669a873c43a822db03ea18c84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4744641724378961922
-    second: Firing_0
-  - first:
-      213: -8420602139968898775
-    second: Firing_1
-  - first:
-      213: -2472190762374662154
-    second: Firing_2
+      213: -3777095027961749484
+    second: Bridge Floor Tile_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -78,8 +72,8 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
     compressionQuality: 50
@@ -106,67 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Firing_0
+      name: Bridge Floor Tile_0
       rect:
         serializedVersion: 2
-        x: 1463
-        y: 94
-        width: 904
-        height: 813
-      alignment: 9
-      pivot: {x: 0.16086923, y: 0.9184781}
+        x: 129
+        y: 234
+        width: 1140
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 208da18928a58d140800000000000000
-      internalID: 4744641724378961922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Firing_1
-      rect:
-        serializedVersion: 2
-        x: 3085
-        y: 94
-        width: 936
-        height: 813
-      alignment: 9
-      pivot: {x: 0.1524919, y: 0.9184781}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 929724cc7f2042b80800000000000000
-      internalID: -8420602139968898775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Firing_2
-      rect:
-        serializedVersion: 2
-        x: 4656
-        y: 94
-        width: 957
-        height: 813
-      alignment: 9
-      pivot: {x: 0.15230395, y: 0.9184781}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6f7f7af899301bdd0800000000000000
-      internalID: -2472190762374662154
+      spriteID: 410227f7510159bc0800000000000000
+      internalID: -3777095027961749484
       vertices: []
       indices: 
       edges: []
@@ -175,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 53f9bfa38e55aa54e80fec56b6420781
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Firing_0: 4744641724378961922
-      Firing_1: -8420602139968898775
-      Firing_2: -2472190762374662154
+      Bridge Floor Tile_0: -3777095027961749484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

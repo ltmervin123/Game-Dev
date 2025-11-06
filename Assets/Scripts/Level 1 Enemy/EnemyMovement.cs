@@ -7,11 +7,13 @@ public class EnemyMovement : MonoBehaviour
     private float flipTimer = 0f;
     private bool isFlipped = true;
 
+    private float health = 5f;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
-       
+
     }
 
     void Update()
@@ -72,7 +74,7 @@ public class EnemyMovement : MonoBehaviour
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
             isFlipped = !isFlipped;
             spriteRenderer.flipX = isFlipped;
-            flipTimer = 0f; 
+            flipTimer = 0f;
         }
         //SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         //spriteRenderer.flipX = true;
@@ -97,4 +99,38 @@ public class EnemyMovement : MonoBehaviour
     //        isGrounded = false;
     //    }
     //}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            OnBulletHit();
+        }
+
+    }
+
+    private void OnBulletHit()
+    {
+        //add hit effect or sound here
+
+
+        if (health == 0)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        health -= 1f;
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            OnBulletHit();
+        }
+    }
 }
