@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
 
+    private Color originalColor;
+    public float flashDuration = 0.1f;
+
     [Header("Restart Settings")]
     public Restart restart;
 
@@ -30,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     }
 
     void Update()
@@ -86,6 +90,19 @@ public class PlayerMovement : MonoBehaviour
         isFiring = false;
     }
 
+    public void HitFlash()
+    {
+        StopAllCoroutines();
+        StartCoroutine(FlashCoroutine());
+    }
+
+    private System.Collections.IEnumerator FlashCoroutine()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = originalColor;
+    }
+
 
 
     void HandleMove()
@@ -122,8 +139,10 @@ public class PlayerMovement : MonoBehaviour
 
     void die()
     {
+        //Add death animation later
 
         restart.ShowRestartPanel();
+        Destroy(gameObject);
     }
 
 
@@ -131,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            HitFlash();
             hitDamage();
         }
     }

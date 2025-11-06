@@ -6,6 +6,9 @@ public class EnemyMovement : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
 
+    private Color originalColor;
+    public float flashDuration = 0.1f;
+
 
     private float flipTimer = 0f;
     private bool isFlipped = true;
@@ -37,6 +40,7 @@ public class EnemyMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
         originalScale = transform.localScale;
     }
 
@@ -140,18 +144,26 @@ public class EnemyMovement : MonoBehaviour
         isFiring = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void HitFlash()
     {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            OnBulletHit();
-        }
+        StopAllCoroutines();
+        StartCoroutine(FlashCoroutine());
     }
+
+    private System.Collections.IEnumerator FlashCoroutine()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = originalColor;
+    }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            HitFlash();
             OnBulletHit();
         }
     }
