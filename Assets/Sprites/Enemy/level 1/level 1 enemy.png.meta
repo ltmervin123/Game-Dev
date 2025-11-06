@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: 2e12f10ab5220294b9456a30ee9a0adf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8872771853046333915
+    second: level 1 enemy_0
+  - first:
+      213: 4822168810120956814
+    second: level 1 enemy_1
+  - first:
+      213: -2884828253824581217
+    second: level 1 enemy_2
+  - first:
+      213: 7701360482411900709
+    second: level 1 enemy_3
+  - first:
+      213: 1132921326406596900
+    second: level 1 enemy_4
+  - first:
+      213: -6088464143252630206
+    second: level 1 enemy_5
+  - first:
+      213: 6286427947747870031
+    second: level 1 enemy_6
+  - first:
+      213: -2481918407759606970
+    second: level 1 enemy_7
+  - first:
+      213: 3380092691688868358
+    second: level 1 enemy_8
+  - first:
+      213: 7432739000425761634
+    second: level 1 enemy_9
+  - first:
+      213: -3823436022052862336
+    second: level 1 enemy_10
+  - first:
+      213: -3496639088272032310
+    second: level 1 enemy_11
+  - first:
+      213: -2080785999504528029
+    second: level 1 enemy_12
+  - first:
+      213: 8388217724363582226
+    second: level 1 enemy_13
+  - first:
+      213: -1950848606152686939
+    second: level 1 enemy_14
+  - first:
+      213: -4180969204091276523
+    second: level 1 enemy_15
+  - first:
+      213: -867882169506099848
+    second: level 1 enemy_16
+  - first:
+      213: 4804111799169648442
+    second: level 1 enemy_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: level 1 enemy_0
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 592
+        width: 165
+        height: 166
+      alignment: 9
+      pivot: {x: 0.2060606, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd149e98dfa622b70800000000000000
+      internalID: 8872771853046333915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_1
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 592
+        width: 165
+        height: 166
+      alignment: 9
+      pivot: {x: 0.2060606, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b4a3edbf8cbe240800000000000000
+      internalID: 4822168810120956814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_2
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 593
+        width: 165
+        height: 166
+      alignment: 9
+      pivot: {x: 0.2060606, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9186c4dcf707f7d0800000000000000
+      internalID: -2884828253824581217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_3
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 594
+        width: 164
+        height: 166
+      alignment: 9
+      pivot: {x: 0.20731707, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f64612e8ab0ea60800000000000000
+      internalID: 7701360482411900709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_4
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 592
+        width: 165
+        height: 166
+      alignment: 9
+      pivot: {x: 0.2060606, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 429fde2a1f1f8bf00800000000000000
+      internalID: 1132921326406596900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_5
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 592
+        width: 145
+        height: 166
+      alignment: 9
+      pivot: {x: 0.23448277, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24559b9ae1e618ba0800000000000000
+      internalID: -6088464143252630206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_6
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 344
+        width: 126
+        height: 167
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45899b59e0ed3750800000000000000
+      internalID: 6286427947747870031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_7
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 344
+        width: 125
+        height: 167
+      alignment: 9
+      pivot: {x: 0.208, y: 0.497006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b4cff9b547e8dd0800000000000000
+      internalID: -2481918407759606970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_8
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 344
+        width: 169
+        height: 158
+      alignment: 9
+      pivot: {x: 0.17159763, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60a4204056088ee20800000000000000
+      internalID: 3380092691688868358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_9
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 344
+        width: 169
+        height: 158
+      alignment: 9
+      pivot: {x: 0.15976332, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26bc1949db4662760800000000000000
+      internalID: 7432739000425761634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_10
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 345
+        width: 169
+        height: 158
+      alignment: 9
+      pivot: {x: 0.16568047, y: 0.4936709}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0864b14023d60fac0800000000000000
+      internalID: -3823436022052862336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_11
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 344
+        width: 169
+        height: 158
+      alignment: 9
+      pivot: {x: 0.16568047, y: 0.5063291}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acdbcc37641797fc0800000000000000
+      internalID: -3496639088272032310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_12
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 345
+        width: 169
+        height: 158
+      alignment: 9
+      pivot: {x: 0.16568047, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d2ded68209f13e0800000000000000
+      internalID: -2080785999504528029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_13
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 344
+        width: 169
+        height: 158
+      alignment: 9
+      pivot: {x: 0.16568047, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ba35fd39fe86470800000000000000
+      internalID: 8388217724363582226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_14
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 59
+        width: 159
+        height: 171
+      alignment: 9
+      pivot: {x: 0.20754716, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a204bb57813de4e0800000000000000
+      internalID: -1950848606152686939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_15
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 59
+        width: 159
+        height: 171
+      alignment: 9
+      pivot: {x: 0.20754717, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513ba4d19a63af5c0800000000000000
+      internalID: -4180969204091276523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_16
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 58
+        width: 159
+        height: 171
+      alignment: 9
+      pivot: {x: 0.20754717, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87d81bbd3c9a4f3f0800000000000000
+      internalID: -867882169506099848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level 1 enemy_17
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 59
+        width: 159
+        height: 171
+      alignment: 9
+      pivot: {x: 0.20754717, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3705c26a32aba240800000000000000
+      internalID: 4804111799169648442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0db7cbe51fec0e74fafa709c95a71555
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":4,"pivotUnitMode":1,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      level 1 enemy_0: 8872771853046333915
+      level 1 enemy_1: 4822168810120956814
+      level 1 enemy_10: -3823436022052862336
+      level 1 enemy_11: -3496639088272032310
+      level 1 enemy_12: -2080785999504528029
+      level 1 enemy_13: 8388217724363582226
+      level 1 enemy_14: -1950848606152686939
+      level 1 enemy_15: -4180969204091276523
+      level 1 enemy_16: -867882169506099848
+      level 1 enemy_17: 4804111799169648442
+      level 1 enemy_2: -2884828253824581217
+      level 1 enemy_3: 7701360482411900709
+      level 1 enemy_4: 1132921326406596900
+      level 1 enemy_5: -6088464143252630206
+      level 1 enemy_6: 6286427947747870031
+      level 1 enemy_7: -2481918407759606970
+      level 1 enemy_8: 3380092691688868358
+      level 1 enemy_9: 7432739000425761634
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
