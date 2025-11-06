@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Obstacle
   - Enemy
+  - LevelOneEndCheckPoint
+  - Bullet
   layers:
   - Default
   - TransparentFX
