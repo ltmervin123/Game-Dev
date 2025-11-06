@@ -7,7 +7,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
 
+    [Header("Restart Settings")]
+    public Restart restart;
+
     [Header("Player Settings")]
+    public HealthBar healthBar;
+    private float health = 100f;
     public float speed = 2.5f;
     public float jumpForce = 4.5f;
     private bool isGrounded;
@@ -101,6 +106,32 @@ public class PlayerMovement : MonoBehaviour
                 float x = Mathf.Abs(firePoint.localPosition.x);
                 firePoint.localPosition = new Vector3(facingLeft ? -x : x, firePoint.localPosition.y, firePoint.localPosition.z);
             }
+        }
+    }
+
+    void hitDamage()
+    {
+        health -= 20f;
+        healthBar.SetHealth(health);
+
+        if (health <= 0)
+        {
+            die();
+        }
+    }
+
+    void die()
+    {
+
+        restart.ShowRestartPanel();
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            hitDamage();
         }
     }
 

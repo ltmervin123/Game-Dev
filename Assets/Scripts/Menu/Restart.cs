@@ -14,17 +14,16 @@ public class Restart : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            restartPanel.SetActive(true);
-            return;
-        }
-
         if (Input.GetKeyDown(KeyCode.R))
         {
             RestartGame();
         }
 
+    }
+
+    public void ShowRestartPanel()
+    {
+        restartPanel.SetActive(true);
     }
 
 
