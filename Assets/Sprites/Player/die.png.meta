@@ -124,12 +124,12 @@ TextureImporter:
       name: die_0
       rect:
         serializedVersion: 2
-        x: 519
-        y: 255
+        x: 525
+        y: 258
         width: 603
         height: 1002
       alignment: 9
-      pivot: {x: 0.30514097, y: 0.91816366}
+      pivot: {x: 0.27766764, y: 0.51664126}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -146,12 +146,12 @@ TextureImporter:
       name: die_1
       rect:
         serializedVersion: 2
-        x: 1564
-        y: 255
+        x: 1567
+        y: 258
         width: 607
         height: 990
       alignment: 9
-      pivot: {x: 0.30313015, y: 0.9292929}
+      pivot: {x: 0.2776676, y: 0.5166413}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,11 +169,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2616
-        y: 255
+        y: 261
         width: 580
         height: 984
       alignment: 9
-      pivot: {x: 0.31724137, y: 0.93495935}
+      pivot: {x: 0.2776676, y: 0.5166413}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -190,12 +190,12 @@ TextureImporter:
       name: die_3
       rect:
         serializedVersion: 2
-        x: 3642
-        y: 251
+        x: 3645
+        y: 254
         width: 732
         height: 1158
       alignment: 9
-      pivot: {x: 0.2513661, y: 0.79447323}
+      pivot: {x: 0.2930341, y: 0.43499154}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -217,7 +217,7 @@ TextureImporter:
         width: 961
         height: 1031
       alignment: 9
-      pivot: {x: 0.19146723, y: 0.89233756}
+      pivot: {x: 0.2930341, y: 0.4811327}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -234,12 +234,12 @@ TextureImporter:
       name: die_5
       rect:
         serializedVersion: 2
-        x: 6226
-        y: 259
+        x: 6232
+        y: 265
         width: 1236
         height: 756
       alignment: 9
-      pivot: {x: 0.14886731, y: 1.2169312}
+      pivot: {x: 0.29796967, y: 0.6788192}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -261,7 +261,7 @@ TextureImporter:
         width: 1295
         height: 410
       alignment: 9
-      pivot: {x: 0.14208494, y: 2.2439024}
+      pivot: {x: 0.2979697, y: 1.2516278}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -278,12 +278,12 @@ TextureImporter:
       name: die_7
       rect:
         serializedVersion: 2
-        x: 9647
-        y: 220
+        x: 9641
+        y: 229
         width: 1295
         height: 398
       alignment: 9
-      pivot: {x: 0.14208494, y: 2.3115578}
+      pivot: {x: 0.2979697, y: 1.251628}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

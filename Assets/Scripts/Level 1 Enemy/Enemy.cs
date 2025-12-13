@@ -34,6 +34,7 @@ public class EnemyMovement : MonoBehaviour
     public float moveSpeed = 2f;
     public float attackCooldown = 1f;
     private float lastAttackTime = 0f;
+    private Shoot shootScript;
 
     void Awake()
     {
@@ -42,6 +43,7 @@ public class EnemyMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
         originalScale = transform.localScale;
+        shootScript = GetComponentInChildren<Shoot>();
     }
 
     void Update()
@@ -99,19 +101,10 @@ public class EnemyMovement : MonoBehaviour
                 TryAttack();
 
             }
-            else
-            {
-                // Move towards player
-                Debug.Log("Enemy moving towards player");
-            }
+
 
         }
-        else
-        {
 
-            // Idle state
-            Debug.Log("Enemy idle");
-        }
     }
 
     void TryAttack()
@@ -119,6 +112,7 @@ public class EnemyMovement : MonoBehaviour
         if (Time.time - lastAttackTime >= attackCooldown)
         {
             lastAttackTime = Time.time;
+            shootScript.StartAudioFire();
             ShootBullet();
         }
     }

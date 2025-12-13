@@ -28,13 +28,23 @@ public class PlayerMovement : MonoBehaviour
     public float fireCooldown = 0.0f;
     private float nextFireTime = 0.5f;
 
+    private Shoot shootAudio;
+    private GameOver gameOver;
+
+
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+        shootAudio = GetComponentInChildren<Shoot>();
+        gameOver = GetComponentInChildren<GameOver>();
     }
+
+
 
     void Update()
     {
@@ -62,8 +72,10 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleFire()
     {
-        if (Input.GetKey(KeyCode.Space) && Time.time > nextFireTime)
+        bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
+        if (Input.GetKey(KeyCode.Space) && Time.time > nextFireTime && !isMoving)
         {
+            shootAudio.StartAudioFire();
             ShootBullet();
         }
 
@@ -86,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
 
     void ResetFiring()
     {
+        shootAudio.StopAudioFire();
         anim.ResetTrigger("isFiring");
         isFiring = false;
     }
@@ -140,8 +153,14 @@ public class PlayerMovement : MonoBehaviour
     void die()
     {
         //Add death animation later
-
         restart.ShowRestartPanel();
+        gameOver.PlayGameOverSound();
+        Invoke(nameof(DestroyPlayer), 1.0f);
+    }
+
+    void DestroyPlayer()
+    {
+
         Destroy(gameObject);
     }
 

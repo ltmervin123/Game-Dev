@@ -110,11 +110,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1463
-        y: 94
+        y: 99
         width: 904
         height: 813
       alignment: 9
-      pivot: {x: 0.16086923, y: 0.9184781}
+      pivot: {x: 0.18386436, y: 0.5098099}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -131,12 +131,12 @@ TextureImporter:
       name: Firing_1
       rect:
         serializedVersion: 2
-        x: 3085
-        y: 94
+        x: 3104
+        y: 114
         width: 936
         height: 813
       alignment: 9
-      pivot: {x: 0.1524919, y: 0.9184781}
+      pivot: {x: 0.1605475, y: 0.4925324}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -154,11 +154,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4656
-        y: 94
+        y: 99
         width: 957
         height: 813
       alignment: 9
-      pivot: {x: 0.15230395, y: 0.9184781}
+      pivot: {x: 0.17751242, y: 0.5087124}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
