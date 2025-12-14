@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
         if (Input.GetKey(KeyCode.Space) && Time.time > nextFireTime && !isMoving)
         {
-            shootAudio.StartAudioFire();
+            // shootAudio.StartAudioFire();
             ShootBullet();
         }
 
@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
         Bullet bulletScript = bullet.GetComponent<Bullet>();
-
+        shootAudio.StartAudioFire();
         float dir = spriteRenderer.flipX ? -1f : 1f;
         bulletScript.SetDirection(new Vector2(dir, 0));
         bulletScript.speed = bulletSpeed;

@@ -11,7 +11,6 @@ public class GameOver : MonoBehaviour
     public void PlayGameOverSound()
     {
         audioSource.Play();
-        Debug.Log("Game Over Sound Played");
-        Debug.Log("Audio Source: " + audioSource.clip.name);
+
     }
 }
