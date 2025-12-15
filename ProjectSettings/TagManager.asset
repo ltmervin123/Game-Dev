@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - LevelOneEndCheckPoint
   - Bullet
+  - KillZone
   layers:
   - Default
   - TransparentFX

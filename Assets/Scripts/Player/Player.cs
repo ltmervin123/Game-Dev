@@ -179,15 +179,40 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        HandleGroundCheck(collision);
+        HandlePlayerKillZone(collision);
+        HandlePlayerSuccessZone(collision);
+
+    }
+
+
+    private void HandleGroundCheck(Collision2D collision)
+    {
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Enemy"))
         {
             isGrounded = true;
         }
 
-        // if (collision.gameObject.CompareTag("LevelOneEndCheckPoint"))
-        // {
-        //     SceneManager.LoadScene("Level3");
-        // }
+    }
+
+    private void HandlePlayerKillZone(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("KillZone"))
+        {
+            healthBar.SetHealth(0);
+            die();
+        }
+
+    }
+
+    private void HandlePlayerSuccessZone(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("LevelOneEndCheckPoint"))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
     }
 
 }
