@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float flashDuration = 0.1f;
 
     [Header("Restart Settings")]
-    public Restart restart;
+    [SerializeField]
+    private Restart restart;
 
     [Header("Player Settings")]
     public HealthBar healthBar;
@@ -29,7 +30,8 @@ public class PlayerMovement : MonoBehaviour
     private float nextFireTime = 0.5f;
 
     private Shoot shootAudio;
-    private GameOver gameOver;
+
+    public bool isDead = false;
 
 
 
@@ -41,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
         shootAudio = GetComponentInChildren<Shoot>();
-        gameOver = GetComponentInChildren<GameOver>();
+        restart = FindFirstObjectByType<Restart>();
     }
 
 
@@ -152,10 +154,10 @@ public class PlayerMovement : MonoBehaviour
 
     void die()
     {
-        //Add death animation later
+        isDead = true;
         restart.ShowRestartPanel();
-        gameOver.PlayGameOverSound();
-        Invoke(nameof(DestroyPlayer), 1.0f);
+        // Invoke(nameof(DestroyPlayer), 1.0f);
+        DestroyPlayer();
     }
 
     void DestroyPlayer()

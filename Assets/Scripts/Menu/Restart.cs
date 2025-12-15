@@ -4,6 +4,9 @@ public class Restart : MonoBehaviour
 {
 
     public GameObject restartPanel;
+    public GameObject player;
+
+    [SerializeField] private GameOver gameOver;
 
 
     void Start()
@@ -14,7 +17,7 @@ public class Restart : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && player == null)
         {
             RestartGame();
         }
@@ -24,6 +27,7 @@ public class Restart : MonoBehaviour
     public void ShowRestartPanel()
     {
         restartPanel.SetActive(true);
+        gameOver.PlayGameOverSound();
     }
 
 
