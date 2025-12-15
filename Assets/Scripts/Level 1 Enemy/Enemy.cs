@@ -29,8 +29,8 @@ public class EnemyMovement : MonoBehaviour
 
     [Header("Player Detection")]
     public Transform player;
-    public float detectionRange = 10f;
-    public float attackRange = 5f;
+    public float detectionRange = 20f;
+    public float attackRange = 20f;
     public float moveSpeed = 2f;
     public float attackCooldown = 1f;
     private float lastAttackTime = 0f;
@@ -57,34 +57,74 @@ public class EnemyMovement : MonoBehaviour
     void flip()
     {
 
+        // if (IsPlayerInRange()) return;
 
-        if (firePoint != null)
-        {
-            float x = Mathf.Abs(firePoint.localPosition.x);
-            firePoint.localPosition = new Vector3(isFlipped ? -x : x, firePoint.localPosition.y, firePoint.localPosition.z);
-        }
+
+        // if (firePoint != null)
+        // {
+        //     float x = Mathf.Abs(firePoint.localPosition.x);
+        //     firePoint.localPosition = new Vector3(isFlipped ? -x : x, firePoint.localPosition.y, firePoint.localPosition.z);
+        // }
+
+        // if (!isFiring)
+        // {
+        //     flipTimer += Time.deltaTime;
+        //     if (flipTimer >= 3f)
+        //     {
+        //         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        //         isFlipped = !isFlipped;
+        //         spriteRenderer.flipX = isFlipped;
+        //         flipTimer = 0f;
+        //     }
+        // }
+
+        if (IsPlayerInRange()) return;
 
         if (!isFiring)
         {
             flipTimer += Time.deltaTime;
             if (flipTimer >= 3f)
             {
-                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
                 isFlipped = !isFlipped;
-                spriteRenderer.flipX = isFlipped;
+                // Use localScale instead of flipX to be consistent
+                transform.localScale = new Vector3(isFlipped ? -originalScale.x : originalScale.x, originalScale.y, originalScale.z);
                 flipTimer = 0f;
             }
         }
 
+        // Update firePoint based on current scale
+        if (firePoint != null)
+        {
+            float x = Mathf.Abs(firePoint.localPosition.x);
+            firePoint.localPosition = new Vector3(transform.localScale.x < 0 ? -x : x, firePoint.localPosition.y, firePoint.localPosition.z);
+        }
+
+    }
+
+    bool IsPlayerInRange()
+    {
+        if (player == null) return false;
+
+        float distance = PlayerDisTance();
+        return distance <= detectionRange;
+    }
+
+    float PlayerDisTance()
+    {
+        if (player == null) return Mathf.Infinity;
+
+        return Vector2.Distance(transform.position, player.position);
     }
 
     void DetectAndAttackPlayer()
+
     {
-        if (player == null) return;
 
-        float distance = Vector2.Distance(transform.position, player.position);
+        if (!player) return;
 
-        if (distance <= detectionRange)
+        float distance = PlayerDisTance();
+
+        if (IsPlayerInRange())
         {
 
             if (player.position.x < transform.position.x)

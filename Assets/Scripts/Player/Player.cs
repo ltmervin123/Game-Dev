@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float bulletSpeed = 20f;
-    public float fireCooldown = 0.0f;
+    public float fireCooldown = 0.5f;
     private float nextFireTime = 0.5f;
 
     private Shoot shootAudio;
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
         if (Input.GetKey(KeyCode.Space) && Time.time > nextFireTime && !isMoving)
         {
-            // shootAudio.StartAudioFire();
+
             ShootBullet();
         }
 

@@ -3,8 +3,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
-    public float maxRange = 1f;
-    public float lifetime = 1f;
+    public float maxRange = 0.1f;
+
     private Vector2 direction;
     private Vector2 startPosition;
 
@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-        Destroy(gameObject, lifetime);
+
     }
 
     void Update()
@@ -24,7 +24,11 @@ public class Bullet : MonoBehaviour
 
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
 
-        if (Vector2.Distance(startPosition, transform.position) >= maxRange) Destroy(gameObject);
+        if (Vector2.Distance(startPosition, transform.position) >= maxRange)
+        {
+
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
